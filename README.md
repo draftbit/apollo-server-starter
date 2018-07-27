@@ -2,6 +2,8 @@
 
 Utilizes [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [HapiJS](https://hapijs.com/) and [KnexJS](https://knexjs.org/) on top of PostgreSQL.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Preposterous/apollo-server-starter)
+
 ## To get started
 
 - `$ yarn global add knex` / `$ npm install -g knex`
@@ -41,4 +43,4 @@ Utilizes [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [Ha
 ## Other notes
 
 - View documentation generated with Graphdoc at `[http://localhost:3000/doc](http://localhost:3000/doc)`
-- Project also includes an example of a [custom scalar]().
+- Project also includes an example of a [custom scalar](https://github.com/Preposterous/apollo-server-starter/blob/master/lib/resolvers.js#L6-L21).
