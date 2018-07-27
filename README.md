@@ -11,7 +11,7 @@ Utilizes [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [Ha
 - `$ knex migrate:latest`
 - `$ knex seed:run`
 - `$ yarn dev` / `$ npm run dev`
-- `[http://localhost:3000/graphiql](http://localhost:3000/graphiql)`
+- [`http://localhost:3000/graphiql`](http://localhost:3000/graphiql)
 - Try the following query:
   ```
   {
@@ -42,5 +42,5 @@ Utilizes [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [Ha
 
 ## Other notes
 
-- View documentation generated with Graphdoc at `[http://localhost:3000/doc](http://localhost:3000/doc)`
+- View documentation generated with Graphdoc at [`http://localhost:3000/doc`](http://localhost:3000/doc)
 - Project also includes an example of a [custom scalar](https://github.com/Preposterous/apollo-server-starter/blob/master/lib/resolvers.js#L6-L21).
