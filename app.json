@@ -2,11 +2,9 @@
   "name": "apollo-server-starter",
   "scripts": {},
   "env": {
-    "PAPERTRAIL_API_TOKEN": {
-      "required": true
-    },
     "PGSSLMODE": {
-      "required": true
+      "required": true,
+      "value": "require"
     }
   },
   "formation": {
@@ -14,7 +12,7 @@
       "quantity": 1
     }
   },
-  "addons": ["papertrail", "heroku-postgresql"],
+  "addons": ["heroku-postgresql"],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
