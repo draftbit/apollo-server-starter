@@ -32,7 +32,7 @@ certificate
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+build/
 
 webpack-stats.json
 webpack-assets.json
