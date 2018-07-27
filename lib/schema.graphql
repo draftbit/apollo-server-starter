@@ -1,0 +1,30 @@
+scalar Date
+
+type Guest {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  reservations: [Reservation!]!
+}
+
+input CreateGuestInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+}
+
+type Reservation {
+  id: ID!
+  arrivalDate: Date!
+  departureDate: Date!
+  guests: Int!
+}
+
+type Query {
+  Guest(email: String!): Guest
+}
+
+type Mutation {
+  createGuest(input: CreateGuestInput!): Guest!
+}

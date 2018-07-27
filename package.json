@@ -1,0 +1,78 @@
+{
+  "name": "apollo-server-starter",
+  "version": "0.0.2",
+  "description": "Apollo Server/HapiJS/PostgreSQL starter kit",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "flow": "flow",
+    "predev": "npm run graphdoc",
+    "rollback": "knex-migrate down --to 0 && knex-migrate up",
+    "bootstrap": "knex seed:run bootstrap",
+    "reset": "yarn rollback && yarn bootstrap",
+    "dev": "NODE_ENV=development nodemon --inspect server.js",
+    "graphdoc": "graphdoc -s ./lib/schema.graphql -o ./doc --force",
+    "lint": "standard --fix",
+    "pretest": "npm run lint",
+    "test": "standard --fix && jest --ci --forceExit",
+    "prepush": "yarn test"
+  },
+  "dependencies": {
+    "apollo-server-hapi": "^1.4.0",
+    "dotenv": "5.0.0",
+    "graphql-tools": "^3.0.5",
+    "hapi": "17.2.0",
+    "hapi-pino": "4.0.3",
+    "hoek": "5.0.3",
+    "humps": "^2.0.1",
+    "joi": "13.1.2",
+    "knex": "0.14.2",
+    "pg": "7.4.1",
+    "pre-push": "0.1.1"
+  },
+  "devDependencies": {
+    "@2fd/graphdoc": "2.x.x",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "expect": "22.x.x",
+    "faker": "^4.1.0",
+    "flow-bin": "^0.75.0",
+    "inert": "5.x.x",
+    "jest": "22.x.x",
+    "knex-migrate": "^1.5.1",
+    "nodemon": "1.x.x",
+    "standard": "10.x.x"
+  },
+  "resolutions": {
+    "graphql": "0.13.0"
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "semi": false,
+    "useTabs": false,
+    "printWidth": 80,
+    "arrowParens": "avoid",
+    "trailingComma": "none",
+    "jsxBracketSameLine": true
+  },
+  "standard": {
+    "ignore": [
+      "/doc"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ]
+  }
+}
