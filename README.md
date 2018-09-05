@@ -7,7 +7,7 @@ Utilizes [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [Ha
 ## To get started
 
 - `$ yarn global add knex` / `$ npm install -g knex`
-- `$ psql -f bootstrap.sql`
+- `$ createdb apollo_server && psql -d apollo_server -f bootstrap.sql`
 - `$ knex migrate:latest`
 - `$ knex seed:run`
 - `$ yarn dev` / `$ npm run dev`
